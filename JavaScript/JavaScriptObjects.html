@@ -5,6 +5,9 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>JS Objects</title>
+</head>
+<body>
+	<h1 id="heading"></h1>
 	<script>
 		// Arrays - Collection of elements, numbered index 
 		// Objects - Collection of elements, 'named' index [key:value pairs]
@@ -34,9 +37,55 @@
 		// rajeshDetails.age = 26
 		// rajeshDetails['age'] = 26
 		// console.log(rajeshDetails)
+
+		/* -------------------------------- */
+
+		// const a = 5
+		// a = 10
+		// console.log(a)
+
+		// const x = 5
+
+		const obj1 = {
+			a: 5,
+			b: 10
+		}
+		// obj1.a = 15
+		// console.log(obj1)
+
+		// const arr = [2, 1, 5, 3]
+		// arr[2] = 10
+		// console.log(arr)
+
+		// const obj1 = {
+		// 	a: 5,
+		// 	b: 10
+		// }
+		// obj1 = {
+		// 	c: 15,
+		// 	d: 20
+		// }
+		// console.log(obj1)
+
+		/* JSON - Javascript Object Notation
+			{
+				firstName: 'Ram',
+				lastName: 'Singh'
+			}
+		*/
+
+		/* JSON Methods -
+			JSON.stringify() -> Converts object to string
+			JSON.parse() -> Convert string to object
+		*/
+
+		// console.log(obj1)
+
+		// console.log(JSON.stringify(obj1))
+
+		// document.getElementById('heading').innerText = JSON.stringify(obj1)
+
+		// console.log(JSON.parse('{"a":5,"b":10}'))
 	</script>
-</head>
-<body>
-	
 </body>
 </html>
