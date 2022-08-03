@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>JS Object Constructors</title>
+	<script>
+		// let pranav = {
+		// 	firstName: 'Pranav',
+		// 	lastName: 'Chaudhari',
+		// 	displayFullName: function () {
+		// 		console.log(this.firstName + ' ' + this.lastName)
+		// 	}
+		// }
+
+		// let ram = {
+		// 	firstName: 'Ram',
+		// 	lastName: 'Singh',
+		// 	displayFullName: function () {
+		// 		console.log(this.firstName + ' ' + this.lastName)
+		// 	}
+		// }
+
+		// Object Constructors - Template/ Blueprint for objects
+		// function Student () {
+		// 	this.country = 'India'
+		// 	this.capital = 'Delhi'
+		// }
+
+		// let pavan = new Student()
+		// let rahul = new Student()
+
+		// console.log(pavan)
+		// console.log(rahul)
+
+		/* ------------------------------------------------ */
+
+		function Student (firstName, lastName) {
+			this.firstName = firstName
+			this.lastName = lastName
+			this.displayFullName = function () {
+				console.log(this.firstName + ' ' + this.lastName)
+			}
+		}
+
+		let pavan = new Student('Pavan', 'Kumar')
+		let rahul = new Student('Rahul', 'Jaiswal')
+
+		console.log(pavan)
+		console.log(rahul)
+
+		pavan.displayFullName()
+
+
+		/* Inbuilt object constructors:
+		1. Number
+		2. String
+		3. Boolean
+
+		To get primitive value out of these typed objects, use the valueOf method
+		*/
+		// let a = 5
+		// console.log(a)
+		
+		// let b = new Number(5)
+		// console.log(b.valueOf())
+
+		// let c = new String('Accio')
+		// console.log(c.valueOf())
+
+		// let d = new Boolean(true)
+		// console.log(d.valueOf())
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

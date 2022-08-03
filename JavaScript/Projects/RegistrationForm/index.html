@@ -16,58 +16,75 @@
 		<h1 class="display-3 title">Registration Form</h1>
 		<form class="row g-3 registration-form">
 			<div class="col-md-4">
-				<label for="validationCustom01" class="form-label">First name</label>
-				<input type="text" class="form-control" id="validationCustom01" value="Mark" required>
-				<div class="valid-feedback">
+				<label for="first-name" class="form-label">First name</label>
+				<input type="text" class="form-control" id="first-name">
+				<div class="valid-feedback" id="first-name-valid">
 					Looks good!
+				</div>
+				<div class="invalid-feedback" id="first-name-invalid">
+					Please enter a valid first name.
 				</div>
 			</div>
 			<div class="col-md-4">
-				<label for="validationCustom02" class="form-label">Last name</label>
-				<input type="text" class="form-control" id="validationCustom02" value="Otto" required>
+				<label for="last-name" class="form-label">Last name</label>
+				<input type="text" class="form-control" id="last-name">
 				<div class="valid-feedback">
 					Looks good!
 				</div>
+				<div class="invalid-feedback">
+					Please enter a valid last name.
+				</div>
 			</div>
 			<div class="col-md-4">
-				<label for="validationCustomUsername" class="form-label">Username</label>
+				<label for="email" class="form-label">Email</label>
 				<div class="input-group has-validation">
 					<span class="input-group-text" id="inputGroupPrepend">@</span>
-					<input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend"
-						required>
+					<input type="text" class="form-control" id="email" aria-describedby="inputGroupPrepend">
+					<div class="valid-feedback">
+						Looks good!
+					</div>
 					<div class="invalid-feedback">
-						Please choose a username.
+						Please enter a valid email.
 					</div>
 				</div>
 			</div>
 			<div class="col-md-6">
-				<label for="validationCustom03" class="form-label">City</label>
-				<input type="text" class="form-control" id="validationCustom03" required>
+				<label for="city" class="form-label">City</label>
+				<input type="text" class="form-control" id="city">
+				<div class="valid-feedback">
+					Looks good!
+				</div>
 				<div class="invalid-feedback">
 					Please provide a valid city.
 				</div>
 			</div>
 			<div class="col-md-3">
-				<label for="validationCustom04" class="form-label">State</label>
-				<select class="form-select" id="validationCustom04" required>
+				<label for="state" class="form-label">State</label>
+				<select class="form-select" id="state">
 					<option selected disabled value="">Choose...</option>
 					<option>...</option>
 				</select>
+				<div class="valid-feedback">
+					Looks good!
+				</div>
 				<div class="invalid-feedback">
 					Please select a valid state.
 				</div>
 			</div>
 			<div class="col-md-3">
-				<label for="validationCustom05" class="form-label">Zip</label>
-				<input type="text" class="form-control" id="validationCustom05" required>
+				<label for="zip" class="form-label">Zip</label>
+				<input type="text" class="form-control" id="zip">
+				<div class="valid-feedback">
+					Looks good!
+				</div>
 				<div class="invalid-feedback">
 					Please provide a valid zip.
 				</div>
 			</div>
 			<div class="col-12">
 				<div class="form-check">
-					<input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
-					<label class="form-check-label" for="invalidCheck">
+					<input class="form-check-input" type="checkbox" value="" id="tnC">
+					<label class="form-check-label" for="tnC">
 						Agree to terms and conditions
 					</label>
 					<div class="invalid-feedback">
@@ -76,13 +93,14 @@
 				</div>
 			</div>
 			<div class="col-12 submit-btn">
-				<button class="btn btn-dark btn-lg" type="submit">Submit form</button>
+				<button class="btn btn-dark btn-lg" type="button" onclick="validate()">Submit form</button>
 			</div>
 		</form>
 	</div>
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
 		integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
 		crossorigin="anonymous"></script>
+	<script src="index.js"></script>
 </body>
 </body>
 

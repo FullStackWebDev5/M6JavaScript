@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>JS Object Methods</title>
+	<script>
+		// Standard Syntax
+		// function abc () {
+		// 	console.log('abc')
+		// }
+
+		// Anonymous Functions
+		// let abc = function () {
+		// 	console.log('abc')
+		// }
+
+		// Self-Invoking Functions - Functions which get invoked at the time of declaration itself
+		// (function abc () {
+		// 	console.log('abc')
+		// })()
+
+		// abc()
+
+		// Properties of Object - Those keys which hold values other than functions | Eg: firstName, lastName
+		// Methods of Object - Those keys which hold functions as values | Eg: sayHi
+		// let pavan = {
+		// 	firstName: 'Pavan',
+		// 	lastName: 'Kumar',
+		// 	sayHi: function () {
+		// 		console.log('Hi')
+		// 	}
+		// }
+
+		// console.log(pavan.lastName)
+		// pavan.sayHi()
+
+		// let pavan = {
+		// 	firstName: 'Pavan',
+		// 	lastName: 'Kumar',
+		// 	sayHi: function (name) {
+		// 		console.log('Hi ' + name + '!')
+		// 	},
+		// 	addTwoNumbers: function (num1, num2) {
+		// 		console.log(num1 + num2)
+		// 	}
+		// }
+
+		// pavan.sayHi('Ajay')
+		// pavan.sayHi('Devansh')
+		// pavan.addTwoNumbers(4, 21)
+
+		//'this' keyword -> Owner of that method
+
+		// let pavan = {
+		// 	firstName: 'Pavan',
+		// 	lastName: 'Kumar',
+		// 	displayFullName: function () {
+		// 		console.log(this.firstName + ' ' + this.lastName)
+		// 	}
+		// }
+
+		// pavan.displayFullName()
+
+		// let pavan = {
+		// 	firstName: 'Pavan',
+		// 	lastName: 'Kumar',
+		// 	hobbies: ['Swimming', 'Cycling', 'Jogging'],
+		// 	displayIntroduction: function () {
+		// 		console.log('My name is ' + this.firstName + ' ' + this.lastName + '. My hobbies are ' + this.hobbies.join(', ') + '.')
+		// 	}
+		// }
+
+		// pavan.displayIntroduction()
+	</script>
+</head>
+<body>
+	
+</body>
+</html>
