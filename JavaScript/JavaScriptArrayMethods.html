@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>JS Array Methods</title>
+	<script>
+		// forEach, filter, map -> Don't manipulate the original array
+
+		/* ----------------------------------------------------------------
+			1. forEach
+					- Iterate and run the callback for each element
+					- Cannot manipulate any elements inside the callback function for the original array
+					- Does not return any value
+			Syntax:
+			arr.forEach(function(element){
+			})
+		*/
+
+		// let arr = [3, 1, 5, 2, 6]
+
+		// for (element of arr) {
+		// 	console.log(element)
+		// }
+
+		// for (index in arr) {
+		// 	console.log(index)
+		// }
+
+		// arr.forEach(function(element) { 
+		// 	console.log(element) 
+		// })
+
+		
+		/* ----------------------------------------------------------------
+				2. filter
+					- Iterate and run the callback for each element
+					- Cannot manipulate any elements inside the callback function for the original array
+					- A condition needs to be returned inside the callback
+					- Filter menthod returns a new array with all filtered elements which satisfy the given condition
+					[Size of array need not be same as original array]
+			Syntax:
+			arr.filter(function(element){
+				return [condition]
+			})
+		*/
+
+		// let arr = [3, 1, 5, 2, 6]
+
+		// let filteredArray = arr.filter(function(element){
+		// 	return element % 2 === 1
+		// })
+
+		// console.log(filteredArray)
+
+		/* ----------------------------------------------------------------
+				3. map
+					- Iterate and run the callback for each element
+					- Cannot manipulate any elements inside the callback function for the original array
+					- Inside the callback function, return updated elements for each iteration
+					- Map method returns a new array with all updated elements which were returned for each iteration
+					[Size of array is exactly same as original array]
+			Syntax:
+			arr.map(function(element){
+				return [updated element]
+			})
+		*/
+
+		let arr = [3, 1, 5, 2, 6]
+
+		// let updatedArray = arr.map(function(element) {
+		// 	return element + 5
+		// })
+
+		console.log(updatedArray)
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>
