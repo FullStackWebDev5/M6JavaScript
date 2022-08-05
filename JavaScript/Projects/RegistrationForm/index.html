@@ -51,16 +51,17 @@
 			<div class="col-md-6">
 				<label for="city" class="form-label">City</label>
 				<input type="text" class="form-control" id="city" autocomplete="off">
-				<div class="valid-feedback">
+				<div class="valid-feedback" id="city-valid">
 					Looks good!
 				</div>
-				<div class="invalid-feedback">
+				<div class="invalid-feedback" id="city-invalid">
 					Please provide a valid city.
 				</div>
 			</div>
 			<div class="col-md-3">
 				<label for="state" class="form-label">State</label>
 				<select class="form-select" id="state">
+					<option value="None" selected>Select state ...</option>
 					<option value="Andhra Pradesh">Andhra Pradesh</option>
 					<option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
 					<option value="Arunachal Pradesh">Arunachal Pradesh</option>
@@ -98,20 +99,20 @@
 					<option value="Uttarakhand">Uttarakhand</option>
 					<option value="West Bengal">West Bengal</option>
 				</select>
-				<div class="valid-feedback">
+				<div class="valid-feedback" id="state-valid">
 					Looks good!
 				</div>
-				<div class="invalid-feedback">
+				<div class="invalid-feedback" id="state-invalid">
 					Please select a valid state.
 				</div>
 			</div>
 			<div class="col-md-3">
 				<label for="zip" class="form-label">Zip</label>
 				<input type="text" class="form-control" id="zip" autocomplete="off">
-				<div class="valid-feedback">
+				<div class="valid-feedback" id="zip-valid">
 					Looks good!
 				</div>
-				<div class="invalid-feedback">
+				<div class="invalid-feedback" id="zip-invalid">
 					Please provide a valid zip.
 				</div>
 			</div>
@@ -121,7 +122,7 @@
 					<label class="form-check-label" for="tnC">
 						Agree to terms and conditions
 					</label>
-					<div class="invalid-feedback">
+					<div class="invalid-feedback" id="tnC-invalid">
 						You must agree before submitting.
 					</div>
 				</div>
