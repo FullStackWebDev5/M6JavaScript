@@ -1,0 +1,15 @@
+.registration-form, .login-form{
+	width: 800px;
+	margin: 10px auto;
+	border-radius: 20px;
+	padding: 10px 10px 30px;
+	box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
+}
+
+.login-form {
+	margin-top: 100px;
+}
+
+.sign-up-title, .login-title, .button-wrapper {
+	text-align: center;
+}
