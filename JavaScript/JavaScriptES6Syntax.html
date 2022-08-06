@@ -73,10 +73,139 @@
 		// console.log(arr.includes(5))
 
 		/* ---------------------------------------------------------------- */
+		// 7. Spread Operator (...: Populate array elements/ object entries)
 
+		// let arr1 = [1, 5, 3, 2, 4]
+		// let arr2 = [6, 7]
+
+		// let newArr = []
+		// for(let i = 0;i< arr1.length; i++) {
+		// 	newArr[i] = arr1[i]
+		// }
+		// let j = arr1.length
+		// for(let i = 0; i < arr2.length; i++) {
+		// 	newArr[j] = arr2[i]
+		// 	j++
+		// }
+		
+		// let newArr =  arr1.concat(arr2)
+		// console.log(newArr)
+
+		// let newArr = [...arr1, ...arr2]
+		// console.log(newArr)
+
+
+		// let obj1 = {
+		// 	a: 5,
+		// 	b: 10
+		// }
+		// let obj2 = {
+		// 	c: 15,
+		// 	d: 20
+		// }
+
+		// let obj3 = {}
+		// for(key in obj1) {
+		// 	obj3[key] = obj1[key]
+		// }
+		// for(key in obj2) {
+		// 	obj3[key] = obj2[key]
+		// }
+
+		// let obj3 = {
+		// 	...obj1,
+		// 	...obj2
+		// }
+
+		// console.log(obj3)
+
+		// obj3 = {
+		// 	a: 5,
+		// 	b: 10,
+		// 	c: 15,
+		// 	d: 20
+		// }
+
+
+		/* ---------------------------------------------------------------- */
+		// 8. Object Property Assignment (Key name = Variable name holding value)
+
+		// let firstName = 'Suyog'
+		// let lastName = 'Ghate'
+
+		// let suyog = {
+		// 	firstName,
+		// 	lastName,
+		// }
+
+		// console.log(suyog)
+
+		/* ---------------------------------------------------------------- */
+		// 9. Destructuring (Extracting key as variable with the value for that key)
+
+		// const obj1 = {
+		// 	a: 5,
+		// 	b: 10,
+		// 	c: 15,
+		// 	d: 20
+		// }
+
+		// const a = obj1.a
+		// const b = obj1.b
+		
+		// const {
+		// 	a,
+		// 	b,
+		// 	d,
+		// } = obj1
+
+		// console.log(a, b, d)
+
+		// const arr1 = [5, 10, 15, 16, 18];
+		// const [x, y, z] = arr1;
+		// console.log(x, y, z)
+
+		/* ---------------------------------------------------------------- */
+		// 10. Object.entries - Array of arrays with 2 elements - key, value
+
+		// let obj1 = {
+		// 	a: 5,
+		// 	b: 10,
+		// 	c: 15
+		// }
+
+		// console.log(Object.entries(obj1))
 	</script>
 </head>
 <body>
 	
 </body>
 </html>
+
+<!--
+		console.log(Object.keys(obj2))
+		console.log(Object.values(obj2))
+
+		---------------------------------------------
+		let obj1 = {
+			a: 5,
+			b: 10,
+			c: 15,
+			a: 20
+		}
+
+		Since 'a' key is repeated, so last assigned value for a will persist
+
+		---------------------------------------------
+		// Cloning an object and changing only required fields
+		let obj2 = {
+			a: 5,
+			b: 50,
+			c: 100
+		}
+
+		let obj3 = {
+			...obj2,
+			a: 10
+		}
+-->
