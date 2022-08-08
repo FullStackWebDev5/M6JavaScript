@@ -175,6 +175,65 @@
 		// }
 
 		// console.log(Object.entries(obj1))
+
+		/* ---------------------------------------------------------------- */
+		// 11. Object.assign - Cloning (Shallow)
+
+		// let x = 5
+		// let y = x
+		// y = 10
+		// console.log(x, y)
+
+		// let obj1 = {
+		// 	a: 5,
+		// 	b: 10
+		// }
+		// let obj2 = obj1
+		// obj2.b = 15
+		// console.log(obj2)
+		// console.log(obj1)
+
+		// Shallow copy
+		// 1. Spread Operator
+
+		// let obj1 = {
+		// 	a: 5,
+		// 	b: 10
+		// }
+		// let obj2 = { ...obj1 }
+		// obj2.b = 15
+		// console.log(obj2)
+		// console.log(obj1)
+
+		// 2. Object.assign
+		// let obj1 = {
+		// 	a: 5,
+		// 	b: 10
+		// }
+		// let obj2 = Object.assign({}, obj1)
+		// obj2.b = 15
+		// console.log(obj2)
+		// console.log(obj1)
+
+		// Deep Copy
+		// let obj1 = {
+		// 	a: 5,
+		// 	b: 10,
+		// 	c: {
+		// 		d: 20,
+		// 		e: 25
+		// 	}
+		// }
+
+		// let obj2 = Object.assign({}, obj1)
+		// obj2.c.d = 100
+		// console.log(obj2)
+		// console.log(obj1)
+
+		// let obj2 = JSON.parse(JSON.stringify(obj1))
+		// obj2.c.d = 100
+		// console.log(obj2)
+		// console.log(obj1)
 	</script>
 </head>
 <body>

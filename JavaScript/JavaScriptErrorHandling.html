@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Error Handling</title>
+	<script>
+		/*
+			Types of errors:
+			1. Compile time error: Lexical/Syntactical error
+			2. Run time error: Errors during code execution
+
+			Syntax:
+			try {
+				// Any code that is probable for run-time errors
+			} catch (error) {
+				// Handling the run-time error caught
+			}
+		*/
+
+		// console.log(1)
+		// console.log(2)
+		// console.log(3)
+		// console.log(eval('5 + something'))
+		// console.log(4)
+		// console.log(5)
+
+		// try {
+		// 	console.log(eval('5 + 5'))
+		// } catch (error) {
+		// 	console.log('This was caught by the catch block ' + error)
+		// }
+
+		// console.log(1)
+		// console.log(2)
+		// try {
+		// 	console.log(eval('5 + something'))
+		// } catch (error) {
+		// 	console.log('This was caught by the catch block ' + error)
+		// }
+		// console.log(4)
+		// console.log(5)
+
+		// try {
+		// 	console.log(eval('5 + something'))
+		// } catch (error) {
+		// 	console.log('This was caught by the catch block ' + error)
+		// } finally { // Always run despite there was any run-time error
+		// 	console.log('This is finally block')
+		// }
+
+		try {
+			let input = -5
+			if(input < 0)
+				throw new Error('Only positive numbers or 0 allowed') // Raise user created errors
+			// Some logic below for calculating factorial for input
+		} catch (error) {
+			console.log('This was caught by the catch block ' + error)
+		}
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>
