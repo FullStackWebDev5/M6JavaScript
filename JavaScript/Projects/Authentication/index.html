@@ -53,6 +53,18 @@
 		<!-- ----------------------------- Sign Up Form ----------------------------- -->
 		<form class="row g-3 registration-form" id="signup-form">
 			<h1 class="col-md-12 display-4 sign-up-title">Sign Up</h1>
+			<div class="alert alert-success alert-dismissible fade show signup-alert col-md-8" role="alert" id="signup-alert-success">
+				Signed up successfully!
+				<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<div class="alert alert-danger alert-dismissible fade show signup-alert col-md-8" role="alert" id="signup-alert-failure">
+				Sign up unsuccessful!
+				<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
 			<div class="col-md-6">
 				<label for="signup-first-name" class="form-label">First name</label>
 				<input type="text" class="form-control" id="signup-first-name" required autocomplete="off">
@@ -126,6 +138,18 @@
 		<!-- -----------------------------  Login Form ----------------------------- -->
 		<form class="login-form" id="login-form">
 			<h1 class="display-4 login-title">Login</h1>
+			<div class="alert alert-success alert-dismissible fade show login-alert" role="alert" id="login-alert-success">
+				Access granted!
+				<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<div class="alert alert-danger alert-dismissible fade show login-alert" role="alert" id="login-alert-failure">
+				Access denied!
+				<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
 			<div class="mb-3">
 				<label for="login-email" class="form-label">Email address</label>
 				<input type="email" class="form-control" id="login-email" aria-describedby="emailHelp">

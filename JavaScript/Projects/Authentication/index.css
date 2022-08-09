@@ -18,3 +18,12 @@
 .sign-up-title, .login-title, .button-wrapper {
 	text-align: center;
 }
+
+.signup-alert, .login-alert {
+	margin: 10px auto 20px;
+	display: none;
+}
+
+.login-alert {
+	width: 75%;
+}
