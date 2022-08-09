@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Function Methods - call, apply, bind</title>
+	<script>
+		/* 
+		Array -
+		Properties: length
+		Methods: map, filter, forEach, etc
+
+		Functions are type of objects
+		Properties: code, name(optional) 
+		Methods: call, apply, bind
+
+		function abc() {
+			console.log('abc')
+		}
+		*/
+
+		let pavanDetails = {
+			firstName: 'Pavan',
+			lastName: 'Kumar',
+		}
+
+		let rahulDetails = {
+			firstName: 'Rahul',
+			lastName: 'Jaiswal',
+		}
+
+		// There was a need to attach object scope to a function ('this' keyword will refer to the object attached in that case)
+
+		/* ------------------------------------------------------------
+		.call()
+		- It will get invoked immediately
+		- First argument is the 'object to attach' and after that, any other arguments for respective parameters are passed separated by commas
+		- If there are x parameters in function definition, there should be x+1 arguments
+		*/
+
+		// function displayFullName() {
+		// 	console.log(this.firstName + ' ' + this.lastName)
+		// }
+		// displayFullName.call(pavanDetails)
+
+
+		// function displayFullName(country, num1, num2) {
+		// 	console.log(this.firstName + ' ' + this.lastName + ' from ' + country)
+		// 	console.log(num1 + num2)
+		// }
+		// // displayFullName.call(pavanDetails, 'India', 20, 25)
+
+		// displayFullName.call(rahulDetails, 'United States', 5, 10)
+
+		/* ------------------------------------------------------------
+		.apply()
+		- It will get invoked immediately
+		- First argument is the 'object to attach' and after that, any other arguments for respective parameters are passed in an array
+		- If there are x parameters in function definition, there should be 2 arguments
+		*/
+
+		// function displayFullName(country, num1, num2) {
+		// 	console.log(this.firstName + ' ' + this.lastName + ' from ' + country)
+		// 	console.log(num1 + num2)
+		// }
+		// displayFullName.apply(pavanDetails, ['India', 20, 25])
+
+		/* ------------------------------------------------------------
+		.bind()
+		- Doesn't get invoked immediately
+		- Attach the object to the function and returns an updated function with that object scope 
+		- Single argumen: 'object to attach'
+		*/
+
+		// function displayFullName(country, num1, num2) {
+		// 	console.log(this.firstName + ' ' + this.lastName + ' from ' + country)
+		// 	console.log(num1 + num2)
+		// }
+		// let displayFullNameWithPavanDetailsScope = displayFullName.bind(pavanDetails)
+
+		// displayFullNameWithPavanDetailsScope('India', 20, 25)
+	</script>
+</head>
+<body>
+	
+</body>
+</html>
+
+<!--
+	Arrow function de-merits:
+	- this keyword inaccessible
+	- are not hoisted
+-->
