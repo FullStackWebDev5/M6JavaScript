@@ -21,6 +21,25 @@ let encryptionRule = {
   '@': '-', '~': '_'
 }
 
+const encrypt = (inputPassword) => {
+	let encryptedPassword = ''
+	for(char of inputPassword) {
+		encryptedPassword = encryptedPassword + encryptionRule[char]
+	}
+	return encryptedPassword
+}
+
+const decrypt = (encryptedPassword) => {
+	let actualPassword = ''
+	let keys = Object.keys(encryptionRule)
+	let values = Object.values(encryptionRule)
+	for(char of encryptedPassword) {
+		let requiredIndex = values.findIndex(value => value === char)
+		actualPassword = actualPassword + keys[requiredIndex]
+	}
+	return actualPassword
+}
+
 const DB_USERS = []
 
 const resetSignupFields = () => {
@@ -51,7 +70,7 @@ const signup = () => {
 		firstName,
 		lastName,
 		email,
-		password,
+		password: encrypt(password),
 		phone
 	}
 
@@ -70,7 +89,7 @@ const login = () => {
 	let loginSuccessAlert = document.getElementById('login-alert-success')
 	let loginFailureAlert = document.getElementById('login-alert-failure')
 
-	let currentUser =  DB_USERS.find(user => user.email === enteredEmail && user.password === enteredPassword)
+	let currentUser =  DB_USERS.find(user => user.email === enteredEmail && decrypt(user.password) === enteredPassword)
 	if(currentUser) {
 		loginSuccessAlert.style.display = 'block'
 		loginFailureAlert.style.display = 'none'

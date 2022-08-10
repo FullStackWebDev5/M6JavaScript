@@ -36,6 +36,28 @@
       ]
 
 			// Q - Return array of only those students who like ice cream
+
+			// Solution - 1
+			// let studentsWhoLikeIcecream = []
+			// students.forEach(student => {
+			// 	if (student.likesIcecream) {
+			// 		studentsWhoLikeIcecream.push(student)
+			// 	}
+			// })
+
+			// let studentsWhoLikeIcecream = []
+			// students.forEach(student => student.likesIcecream ? studentsWhoLikeIcecream.push(student) : '')
+			// console.log(studentsWhoLikeIcecream)
+
+			// Solution - 2
+			// let studentsWhoLikeIcecream = students.filter(student => {
+			// 	return student.likesIcecream
+			// })
+			// console.log(studentsWhoLikeIcecream)
+
+			let studentsWhoLikeIcecream = students.filter(student => student.likesIcecream)
+			console.log(studentsWhoLikeIcecream)
+
 	</script>
 </head>
 <body>
