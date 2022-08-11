@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Javascript Callbacks</title>
+	<script>
+		/* 
+			Higher Order Functions:
+			- Pass another function as argument (Callbacks)
+			- Return/nest another function (Closures)
+
+			Callbacks: When a function definition is passed as an argument to another function
+			(Handle asynchronous code)
+		*/
+
+		// function abc(callback) {
+		// 	callback()
+		// 	console.log('abc')
+		// }
+
+		// abc(function () {
+		// 	console.log('def')
+		// })
+
+		/* -------------------------------- */
+
+		let firstFivePrimeNumbers = []
+
+		function fetchRecords(callback) {
+			setTimeout(function () {
+				firstFivePrimeNumbers = [2, 3, 5, 7, 11]
+				callback()
+			}, 5000)
+		}
+
+		fetchRecords(function() {
+			console.log(firstFivePrimeNumbers)
+		})
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

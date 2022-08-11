@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Javascript Callbacks</title>
+	<script>
+		/*
+			Order placed 
+			After 2s -> Chef received the order and started preparing
+			After 10s -> Pizza Sauce added
+			After 5s -> First layer of cheeze added
+			After 12s -> Toppings added
+			After 5s -> Second layer of cheeze added
+			After 15s -> Pizza baked!
+			After 8s -> Oregano added and packed
+			After 2s -> Package received at counter
+			The order is ready and handed over to the Zomato delivery guy!
+		*/
+
+
+		// Callback Hell - When callback calling callback repeatedly, it forms a structure like below.
+		function executeOrder(callback) {
+			console.log('Order placed')
+			setTimeout(function () {
+				console.log('Chef received the order and started preparing')
+				setTimeout(function () {
+					console.log('Pizza Sauce added')
+					setTimeout(function () {
+						console.log('First layer of cheeze added')
+						setTimeout(function () {
+							console.log('Toppings added')
+							setTimeout(function () {
+								console.log('Second layer of cheeze added')
+								setTimeout(function () {
+									console.log('Pizza baked!')
+									setTimeout(function () {
+										console.log('Oregano added and packed')
+										setTimeout(function () {
+											console.log('Package received at counter')
+											callback()
+										}, 2000)
+									}, 8000)
+								}, 15000)
+							}, 5000)
+						}, 12000)
+					}, 5000)
+				}, 10000)
+			}, 2000)
+		}
+	</script>
+</head>
+
+<body>
+	<button
+		onclick="executeOrder(function() { 
+			console.log('The order is ready and handed over to the Zomato delivery guy!') 
+		})">Execute Order
+	</button>
+</body>
+
+</html>
