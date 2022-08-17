@@ -1,46 +1,32 @@
+let orderStatuses = document.getElementsByClassName('order-status-block')
+
 const executeOrder = () => {
-	console.log('Order placed')
 	let orderId = document.getElementById('order-id-input').value
-	console.log(orderId)
 	document.getElementById('order-id-input').value = ''
+	document.getElementById('order-id-display').innerText = `Order Status for ID: ${orderId}`
+	orderStatuses[0].classList.remove('btn-light')
+	orderStatuses[0].classList.add('btn-success')
+
+	chefReceived()
+		.then(pizzaSauceAdded)
+		.then(firstLayerOfCheezeAdded)
+		.then(toppingsAdded)
+		.then(secondLayerOfCheezeAdded)
+		.then(pizzaBaked)
+		.then(oreganoAddedAndPacked)
+		.then(packageReceivedAtCounter)
+		.then(() => {
+			orderStatuses[9].classList.remove('btn-light')
+			orderStatuses[9].classList.add('btn-success')
+		})
+		.catch((err) => console.log(err))
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 const chefReceived = () => {
 	return new Promise((resolve, reject) => {
 		setTimeout(() => {
-			console.log('Chef received the order and started preparing')
+			orderStatuses[1].classList.remove('btn-light')
+			orderStatuses[1].classList.add('btn-success')
 			resolve()
 		}, 2000)
 	})
@@ -49,7 +35,8 @@ const chefReceived = () => {
 const pizzaSauceAdded = () => {
 	return new Promise((resolve, reject) => {
 		setTimeout(() => {
-			console.log('Pizza Sauce added')
+			orderStatuses[2].classList.remove('btn-light')
+			orderStatuses[2].classList.add('btn-success')
 			resolve()
 		}, 10000)
 	})
@@ -58,7 +45,8 @@ const pizzaSauceAdded = () => {
 const firstLayerOfCheezeAdded = () => {
 	return new Promise((resolve, reject) => {
 		setTimeout(() => {
-			console.log('First layer of cheeze added')
+			orderStatuses[3].classList.remove('btn-light')
+			orderStatuses[3].classList.add('btn-success')
 			resolve()
 		}, 5000)
 	})
@@ -67,7 +55,8 @@ const firstLayerOfCheezeAdded = () => {
 const toppingsAdded = () => {
 	return new Promise((resolve, reject) => {
 		setTimeout(() => {
-			console.log('Toppings added')
+			orderStatuses[4].classList.remove('btn-light')
+			orderStatuses[4].classList.add('btn-success')
 			resolve()
 		}, 12000)
 	})
@@ -76,7 +65,8 @@ const toppingsAdded = () => {
 const secondLayerOfCheezeAdded = () => {
 	return new Promise((resolve, reject) => {
 		setTimeout(() => {
-			console.log('Second layer of cheeze added')
+			orderStatuses[5].classList.remove('btn-light')
+			orderStatuses[5].classList.add('btn-success')
 			resolve()
 		}, 5000)
 	})
@@ -85,7 +75,8 @@ const secondLayerOfCheezeAdded = () => {
 const pizzaBaked = () => {
 	return new Promise((resolve, reject) => {
 		setTimeout(() => {
-			console.log('Pizza baked!')
+			orderStatuses[6].classList.remove('btn-light')
+			orderStatuses[6].classList.add('btn-success')
 			resolve()
 		}, 15000)
 	})
@@ -94,7 +85,8 @@ const pizzaBaked = () => {
 const oreganoAddedAndPacked = () => {
 	return new Promise((resolve, reject) => {
 		setTimeout(() => {
-			console.log('Oregano added and packed')
+			orderStatuses[7].classList.remove('btn-light')
+			orderStatuses[7].classList.add('btn-success')
 			resolve()
 		}, 8000)
 	})
@@ -103,22 +95,9 @@ const oreganoAddedAndPacked = () => {
 const packageReceivedAtCounter = () => {
 	return new Promise((resolve, reject) => {
 		setTimeout(() => {
-			console.log('Package received at counter')
+			orderStatuses[8].classList.remove('btn-light')
+			orderStatuses[8].classList.add('btn-success')
 			resolve()
 		}, 2000)
 	})
 }
-
-// const executeOrder = () => {
-// 	console.log('Order placed')
-// 	chefReceived()
-// 		.then(pizzaSauceAdded)
-// 		.then(firstLayerOfCheezeAdded)
-// 		.then(toppingsAdded)
-// 		.then(secondLayerOfCheezeAdded)
-// 		.then(pizzaBaked)
-// 		.then(oreganoAddedAndPacked)
-// 		.then(packageReceivedAtCounter)
-// 		.then(() => console.log('The order is ready and handed over to the Zomato delivery guy!'))
-// 		.catch((err) => console.log(err))
-// }

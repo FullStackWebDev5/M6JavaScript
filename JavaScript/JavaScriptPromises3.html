@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>JS Promises</title>
+	<script>
+		let promise1 = new Promise((resolve, reject) => {
+			setTimeout(() => {
+				resolve('[PROMISE 1] Resolved')
+			}, 1000)
+		})
+
+		let promise2 = new Promise((resolve, reject) => {
+			setTimeout(() => {
+				resolve('[PROMISE 2] Resolved')
+			}, 3000)
+		})
+
+		let promise3 = new Promise((resolve, reject) => {
+			setTimeout(() => {
+				resolve('[PROMISE 3] Resolved')
+			}, 5000)
+		})
+
+		// promise1
+		// 	.then((resolvedMessage) => console.log(resolvedMessage))
+		// 	.catch((err) => console.log(err))
+		
+		// promise2
+		// 	.then((resolvedMessage) => console.log(resolvedMessage))
+		// 	.catch((err) => console.log(err))
+		
+		// promise3
+		// 	.then((resolvedMessage) => console.log(resolvedMessage))
+		// 	.catch((err) => console.log(err))
+
+		/*
+			- Will only resolve if 'ALL' promises gets resolved (can be related to && opeartor)
+			- Overall resolved value will be an array of resolved values from all promises
+			- Rejected value will be the first rejected promise value
+			- Overall promise resolve time = resolve time of promise which takes the largest time
+		*/
+
+		// Promise.all([promise1, promise2, promise3])
+		// 	.then((resolvedMessage) => console.log(resolvedMessage))
+		// 	.catch((err) => console.log(err))
+
+		/*
+			- Will resolve even if a 'SINGLE' promise gets resolved (can be related to || opeartor)
+			- Overall resolved value = Resolved value of first resolved promise
+			- Rejected promises will be skipped, If all promises are rejected - Promise.any will be rejected (catch handler will work)
+			- Overall promise resolve time = resolve time of promise which takes the shortest time
+		*/
+
+		Promise.any([promise1, promise2, promise3])
+			.then((resolvedMessage) => console.log(resolvedMessage))
+			.catch((err) => console.log(err))
+	</script>
+</head>
+<body>
+	
+</body>
+</html>
