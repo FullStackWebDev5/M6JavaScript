@@ -1,5 +1,7 @@
 .main-title {
 	text-align: center;
+	background: #006491;
+  color: white;
 }
 
 .order-id-input {

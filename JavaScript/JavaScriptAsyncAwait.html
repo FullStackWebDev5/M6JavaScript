@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>JS Async Await</title>
+	<script>
+		// ASYNC - Attach this keyword to any function - To make it asynchronous/ Handle asynchronous code
+		// AWAIT - Waits for resolved state of promise (Returns resolved value of promise)
+		// await should always be used inside async function
+
+		// let promise = new Promise((resolve, reject) => {
+		// 	setTimeout(() => {
+		// 		resolve('Promise 1 resolved!')
+		// 	}, 4000)
+		// })
+
+		// promise.then((resolvedMessage) => {
+		// 	console.log('[RESOLVED] '+ resolvedMessage)
+		// }).catch((rejectedMessage) => {
+		// 	console.log('[REJECTED] '+ rejectedMessage)
+		// })
+
+		/* ------------------------------ */
+		// async function abc() {}
+		// const abc = async function () {}
+		// const abc = async () => {}
+		/* ------------------------------ */
+
+		// EQUIVALENT REPRESENTATION HANDLING PROMISES USING ASYNC-AWAIT
+		// const handlePromise = async function () {
+		// 	try {
+		// 		const resolvedMessage = await promise
+		// 		console.log('[RESOLVED] '+ resolvedMessage)
+		// 	} catch (rejectedMessage) {
+		// 		console.log('[REJECTED] '+ rejectedMessage)
+		// 	}
+		// }
+		// handlePromise()
+
+		let fetchDataFromServer = () => new Promise((resolve, reject) => {
+			setTimeout(() => {
+				resolve('[200] Fetched data successfully')
+			}, 4000)
+		})
+
+		let processData = () => new Promise((resolve, reject) => {
+			setTimeout(() => {
+				resolve('Processed data successfully')
+			}, 8000)
+		})
+
+		const fetchAndProcessData = async function () {
+			try {
+				console.log('Fetching data now ...')
+				const data = await fetchDataFromServer()
+				console.log(data)
+				console.log('Processing data now ...')
+				const processedData = await processData()
+				console.log(processedData)
+			} catch (err) {
+				console.log(err)
+			}
+		}
+		fetchAndProcessData()
+	</script>
+</head>
+<body>
+	
+</body>
+</html>
