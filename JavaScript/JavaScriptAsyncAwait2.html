@@ -5,7 +5,7 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Javascript Promises</title>
+	<title>Javascript Async Await</title>
 	<script>
 		/*
 			Order placed 
@@ -92,18 +92,21 @@
 			})
 		}
 
-		const executeOrder = () => {
-			console.log('Order placed')
-			chefReceived()
-				.then(pizzaSauceAdded)
-				.then(firstLayerOfCheezeAdded)
-				.then(toppingsAdded)
-				.then(secondLayerOfCheezeAdded)
-				.then(pizzaBaked)
-				.then(oreganoAddedAndPacked)
-				.then(packageReceivedAtCounter)
-				.then(() => console.log('The order is ready and handed over to the Zomato delivery guy!'))
-				.catch((err) => console.log(err))
+		const executeOrder = async () => {
+			try {
+				console.log('Order placed')
+				await chefReceived()
+				await pizzaSauceAdded()
+				await firstLayerOfCheezeAdded()
+				await toppingsAdded()
+				await secondLayerOfCheezeAdded()
+				await pizzaBaked()
+				await oreganoAddedAndPacked()
+				await packageReceivedAtCounter()
+				console.log('The order is ready and handed over to the Zomato delivery guy!')
+			} catch (err) {
+				console.log(err)
+			}
 		}
 	</script>
 </head>
