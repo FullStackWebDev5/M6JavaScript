@@ -1,7 +1,4 @@
-const executeOrder = () => {
-	let orderId = document.getElementById('order-id-input').value
-	document.getElementById('order-id-input').value = ''
-
+const createOrderCard = (orderId) => {
 	let orderCardsWrapper = document.getElementById('order-cards-wrapper')
 
 	let colDiv = document.createElement('div')
@@ -28,7 +25,16 @@ const executeOrder = () => {
 	cardText1.innerText = 'Medium Size Pizza - 2 Nos'
 	cardText2.innerHTML = 'Bill Amount: <b>$22</b>'
 	statusBadge.innerText ='First layer of cheeze added'
-	cardFooter.innerText = '18-08-2022 10:24 PM'
+	cardFooter.innerText = new Date().toLocaleDateString("en-US", {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+		hour: "2-digit",
+		minute: "2-digit",
+		second: "2-digit"
+  });
+
+	statusBadge.id = orderId
 
 	cardDiv.appendChild(cardHeader)
 	cardBody.appendChild(cardText1)
