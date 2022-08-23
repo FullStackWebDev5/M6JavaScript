@@ -21,6 +21,9 @@
 	background: #006491;
   color: white;
 	border-radius: 20px 20px 0 0;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 }
 
 .order-status-card .card-footer{
@@ -35,4 +38,8 @@
 
 .order-status-card .rounded-pill {
 	font-size: 1em;
+}
+
+.cancel-btn:hover {
+	cursor: pointer;
 }
