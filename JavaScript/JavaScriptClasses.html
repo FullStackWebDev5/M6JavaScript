@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>JS Classes</title>
+	<script>
+		/*
+			JS Classes: Template/ Blueprint for objects
+		*/
+
+		// class Student {
+		// 	constructor (firstName, lastName) {
+		// 		this.firstName = firstName
+		// 		this.lastName = lastName
+		// 	}
+		// }
+
+		// const anees = new Student('Mohd', 'Anees')
+		
+		/* constructor: Default method of a class which gets invoked during the creation of object */
+
+		/* Methods:
+			1. Getters: Get/Receive some information of the created object properties/methods
+			2. Setters: Set the values for properties/methods of created object
+		*/
+
+		class Student {
+			constructor (firstName, lastName) {
+				this.firstName = firstName
+				this.lastName = lastName
+			}
+
+			// Getter method
+			displayFullName () {
+				console.log(this.firstName + ' ' + this.lastName)
+			}
+
+			// Getter method
+			displayInfo () {
+				console.log(JSON.stringify(this))
+			}
+
+			// Setter method
+			setStudentBatch (batchNo) {
+				this.batch = batchNo
+			}
+		}
+
+		const anees = new Student('Mohd', 'Anees')
+
+		anees.displayInfo()
+
+		anees.setStudentBatch(10)
+
+		anees.displayInfo()
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

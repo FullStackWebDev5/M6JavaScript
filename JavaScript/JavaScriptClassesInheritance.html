@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>JS Classes Inheritance</title>
+	<script>
+		/*
+			Parent: 
+			- First Name
+			- Last Name
+			- DNA
+			- Age
+
+			Child:
+			- First Name
+			- Age
+			[Last Name and DNA will be inherited from parent]
+
+			------------------------------------------------ 
+
+			Class Inheritance:
+				- Child class inherits all properties and methods from the parent class and can have some unique properties and methods of its own.
+				- using 'extends' keyword
+				- using 'super' method: Invoke the constructor of the parent class
+		*/
+
+		/* Person (Parent class) - Student (Child class) */
+
+		class Person {
+			constructor (firstName, lastName, age) {
+				this.firstName = firstName
+				this.lastName = lastName
+				this.age = age
+			}
+
+			displayIntro() {
+				console.log(`${this.firstName} ${this.lastName} is ${this.age} years old.`)
+			}
+		}
+
+		// const nehal = new Person('Nehal', 'Shetty', 21)
+		// nehal.displayIntro()
+
+		class Student extends Person {
+			constructor (firstName, lastName, age, course, batch) {
+				super(firstName, lastName, age)
+				this.course = course
+				this.batch = batch
+			}
+		}
+
+		const nehal = new Student('Nehal', 'Shetty', 21, 'MERN', 12)
+		console.log(nehal)
+		nehal.displayIntro()
+	</script>
+</head>
+<body>
+	
+</body>
+</html>
