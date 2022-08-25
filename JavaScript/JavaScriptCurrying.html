@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>JS Currying</title>
+	<script>
+		/*
+			Currying: 
+			- Function which takes one argument at a time, and returns a new function expecting the next argument
+			- It is a transformation of functions that translates a function 
+				from callable as func(a, b, c) into callable as func(a)(b)(c)
+		*/
+
+		// Function to add three numbers
+		// const add = (num1, num2, num3) => {
+		// 	return num1 + num2 + num3
+		// }
+		// console.log(add(5, 10, 15))
+
+		// Curried version of above function
+		const add = (num1) => {
+			return (num2) => {
+				return (num3) => {
+					return num1 + num2 + num3
+				}
+			}
+		}
+		console.log(add(5)(10)(15))
+	</script>
+</head>
+<body>
+	
+</body>
+</html>
