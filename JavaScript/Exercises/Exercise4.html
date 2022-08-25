@@ -78,6 +78,24 @@
 			Sort the array based on average marks (Topper first)
 			If equal, then sort on the basis of batch number (Lowest first)
 		*/
+
+		let studentDetails = students.map(student => {
+			let marksArray = Object.values(student.marks)
+			let totalMarks = 0
+			marksArray.forEach(marks => {
+				totalMarks = totalMarks + marks
+			})
+			let averageMarks = totalMarks / marksArray.length
+			return {
+				name: student.name,
+				batch: student.batch, 
+				averageMarks: averageMarks
+			}
+		})
+
+		studentDetails.sort((element1, element2) => element2.averageMarks - element1.averageMarks)
+
+		console.log(studentDetails)
 	</script>
 </head>
 <body>
