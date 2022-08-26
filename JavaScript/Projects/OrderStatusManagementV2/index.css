@@ -51,3 +51,8 @@
 #order-input-modal .modal-body {
 	padding: 2rem 3rem;
 }
+
+.empty-order {
+	display: block;
+	margin: auto;
+}
