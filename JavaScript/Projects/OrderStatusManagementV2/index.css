@@ -43,3 +43,11 @@
 .cancel-btn:hover {
 	cursor: pointer;
 }
+
+.btn-wrapper {
+	text-align: center;
+}
+
+#order-input-modal .modal-body {
+	padding: 2rem 3rem;
+}

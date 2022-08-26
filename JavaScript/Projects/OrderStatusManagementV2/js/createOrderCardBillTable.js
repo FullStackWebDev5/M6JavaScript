@@ -1,19 +1,4 @@
-const createOrderCardBillTable = () => {
-	let billDetails = [
-    {
-      item: "Medium Corn",
-      price: 5.00,
-    },
-    {
-      item: "Large Mushroom",
-      price: 8.50,
-    },
-    {
-      item: "Medium Paneer",
-      price: 4.75,
-    },
-  ];
-
+const createOrderCardBillTable = (billDetails) => {
 	// Calculate Total Amount 
 	let totalAmount = 0
 	billDetails.forEach(element => {

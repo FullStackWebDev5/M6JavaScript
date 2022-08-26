@@ -17,14 +17,56 @@
 <body>
 	<div class="container">
 		<h1 class="display-2 main-title">Max's Pizza</h1>
-		<div class="input-group mb-3 order-id-input-wrapper">
-			<input type="text" class="form-control" placeholder="Enter Order ID" aria-describedby="button-addon2"
-				id="order-id-input">
-			<button class="btn btn-danger" type="button" id="button-addon2" onclick="executeOrder()">Execute</button>
+		<div class="btn-wrapper">
+			<button class="btn btn-danger" type="button" id="button-addon2" data-bs-toggle="modal" data-bs-target="#order-input-modal">Create new order</button>
 		</div>
 		<div class="row" id="order-cards-wrapper">
 		</div>
 	</div>
+
+	<div class="modal fade" id="order-input-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel">Create new order</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					<form class="row g-3 needs-validation" novalidate>
+						<div class="col-md-6">
+							<label for="item-1" class="form-label">Item 1</label>
+							<input type="text" class="form-control" id="item-1" required>
+						</div>
+						<div class="col-md-6">
+							<label for="price-1" class="form-label">Price</label>
+							<input type="number" class="form-control" id="price-1" required>
+						</div>
+						<div class="col-md-6">
+							<label for="item-2" class="form-label">Item 2</label>
+							<input type="text" class="form-control" id="item-2" required>
+						</div>
+						<div class="col-md-6">
+							<label for="price-2" class="form-label">Price</label>
+							<input type="number" class="form-control" id="price-2" required>
+						</div>
+						<div class="col-md-6">
+							<label for="item-3" class="form-label">Item 3</label>
+							<input type="text" class="form-control" id="item-3" required>
+						</div>
+						<div class="col-md-6">
+							<label for="price-3" class="form-label">Price</label>
+							<input type="number" class="form-control" id="price-3" required>
+						</div>
+					</form>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+					<button type="button" class="btn btn-danger" data-bs-dismiss="modal" onclick="executeOrder()">Execute</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
 		integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
 		crossorigin="anonymous"></script>

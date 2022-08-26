@@ -1,4 +1,4 @@
-const createOrderCard = (orderId) => {
+const createOrderCard = (orderId, billDetails) => {
 	let orderCardsWrapper = document.getElementById('order-cards-wrapper')
 
 	let colDiv = document.createElement('div')
@@ -32,7 +32,7 @@ const createOrderCard = (orderId) => {
 
 	statusBadge.id = orderId
 
-	let billTable = createOrderCardBillTable()
+	let billTable = createOrderCardBillTable(billDetails)
 
 	cardHeader.appendChild(cancelBtn)
 	cardDiv.appendChild(cardHeader)
